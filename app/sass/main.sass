@@ -1,62 +1,222 @@
 @import vars
 @import fonts
 @import libs
+@import "../../node_modules/mmenu-js/dist/mmenu.css"
 
-::placeholder
-	color: #666
+// ::placeholder
+// 	color: #666
 
-::selection
-	background-color: $accent
-	color: #fff
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
 
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green
 
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
-	font-family: 'Roboto', sans-serif
+	font-family: 'Roboto', serif
+	font-weight: 200
+	color: #ffffff
+	line-height: 1
+	font-size: 18px
 	overflow-x: hidden
+  box-sizing: border-box
 	color: $text
 
-// Custom Sass / Remove before use
-
 .container
-	max-width: 700px
-	padding:
-		right: $gutter/2
-		left: $gutter/2
-	margin:
-		left: auto
-		right: auto
+  margin: 0 auto
+  width: 1140px
+  max-width: 100%
+//===================================================================================
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
 
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-		grid-area: left
-	> div:last-child
-		grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-			padding: $gutter/2 0
-	
-.example-img
-	width: 100%
+.accent-btn
+  padding: 21px 51px
+  font-size: 16px
+  font-weight: 500
+  font-family: 'Roboto', serif
+  color: #ffffff
+  background-color: $accent
+  border: none
+  border-radius: 30px
 
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+//===================================================================================
+
+.header
+  background: #595345 url("../img/_src/header/header-bg.jpg") center center no-repeat
+  background-size: cover
+  position: relative
+  &__inner
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+  &__topnav
+    margin-bottom: 24px
+  &__title
+    margin-bottom: 39px
+    font-weight: 700
+    font-size: 48px
+    color: #ffffff
+    text-align: center
+  &__subtitle
+    margin-top: 7px
+    font-size: 36px
+  &__text
+    margin-bottom: 46px
+    font-size: 22px
+    font-weight: 100
+    color: #ffffff
+    text-align: center
+  &__sup
+    vertical-align: top
+    font-size: 0.6em
+  &__form-wrap
+    margin-bottom: 22px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__form
+    position: relative
+    &-decorate
+      z-index: 0
+      position: absolute
+      top: 25px
+      bottom: 30px
+      left: -33px
+      right: -33px
+      border-left: 1px solid rgba(256, 256, 256, 0.3)
+      border-bottom: 1px solid rgba(256, 256, 256, 0.3)
+      border-right: 1px solid rgba(256, 256, 256, 0.3)
+      &:before, &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        width: 18px
+        height: 1px
+        background: rgba(256, 256, 256, 0.3)
+      &:before
+        left: 0
+      &:after
+        right: 0px
+  &__input-wrap
+    z-index: 2
+    position: relative
+    margin-bottom: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__input
+    padding: 17px 0 20px 25px
+    width: 290px
+    box-sizing: border-box
+    border-radius: 26px
+    border: none
+    &,&::placeholder
+      font-size: 13px
+      font-weight: 200
+      color: #606060
+    &:not(:last-child)
+      margin-right: 9px
+  &__submit-wrap
+    position: relative
+    z-index: 2
+    text-align: center
+  &__descr
+    font-size: 14px
+    font-weight: 200
+    color: #ffffff
+    text-align: center
+  &__down-link
+    margin-top: auto
+    margin-bottom: 40px
+    display: flex
+    justify-content: center
+.down-link
+  display: block
+  width: 31px
+  height: 55px
+  position: relative
+  &__icon
+    display: block
+    height: 100%
+    width: 100%
+    box-shadow: inset 0 0 0 1px #fff
+    border-radius: 25px
+  &__icon:before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 20%
+    width: 7px
+    height: 7px
+    background: #fff
+    border-radius: 4px
+    animation-duration: 1.5s
+    animation-iteration-count: infinite
+    animation-name: scroll
+@keyframes scroll
+  0%
+    opacity: 1
+    top: 6px
+  100%
+    opacity: 0
+    top: 80%
+
+.topnav
+  padding: 34px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__inner
+    display: flex
+    align-items: center
+  &__phone
+    margin-right: 60px
+
+.phone
+  display: flex
+  align-items: center
+  color: #ffffff
+  &__img
+    margin-right: 13px
+  &__descr
+    margin-bottom: 5px
+    font-size: 12px
+    font-weight: 200
+  &__text
+    font-size: 21px
+    font-weight: 500
+
+.menu-btn
+  display: block
+  text-align: center
+  &__icon
+    margin-bottom: 5px
+    display: block
+    width: 46px
+    height: 21px
+    background: #ffffff
+  &__text
+    font-size: 12px
+    text-transform: uppercase
+    color: #ffffff
+
+.logo
+  display: flex
+  align-items: center
+  &__img
+    margin-right: 10px
+  &__text
+    font-size: 28px
+    font-family: "Roboto"
+    font-weight: 800
+    color: #ffffff

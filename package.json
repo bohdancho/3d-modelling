@@ -9,7 +9,6 @@
 	"author": "WebDesign Master",
 	"license": "ISC",
 	"devDependencies": {
-		"bootstrap": "^4.4.1",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
@@ -21,6 +20,7 @@
 		"gulp-responsive": "^3.0.1",
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
-		"gulp-uglify-es": "^2.0.0"
+		"gulp-uglify-es": "^2.0.0",
+		"mmenu-js": "git+https://github.com/FrDH/mmenu-js.git"
 	}
 }
