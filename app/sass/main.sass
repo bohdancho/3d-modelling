@@ -3,20 +3,6 @@
 @import libs
 @import "../../node_modules/mmenu-js/dist/mmenu.css"
 
-// ::placeholder
-// 	color: #666
-
-// ::selection
-// 	background-color: $accent
-// 	color: #fff
-
-// input, textarea
-// 	outline: none
-// 	&:focus:required:invalid
-// 		border-color: red
-// 	&:required:valid
-// 		border-color: green
-
 body
 	font-size: 16px
 	min-width: 320px
@@ -29,19 +15,26 @@ body
 	overflow-x: hidden
   box-sizing: border-box
 	color: $text
-
+    
 .container
-  margin: 0 auto
-  width: 1140px
-  max-width: 100%
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+  @media screen and (max-width: 768px)
+    width: 100%
+  @media screen and (max-width: 1200px)
+    width: 970px;
+  @media screen and (max-width: 992px)
+    width: 750px;
+
 //===================================================================================
 
-
 .accent-btn
-  padding: 21px 51px
+  padding: 23px 51px
   font-size: 16px
   font-weight: 500
-  font-family: 'Roboto', serif
   color: #ffffff
   background-color: $accent
   border: none
@@ -57,10 +50,14 @@ body
     display: flex
     flex-direction: column
     min-height: 100vh
-  &__topnav
-    margin-bottom: 24px
+  &__main
+    padding: 25px 0
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
   &__title
-    margin-bottom: 39px
+    margin-bottom: 38px
     font-weight: 700
     font-size: 48px
     color: #ffffff
@@ -83,29 +80,44 @@ body
     justify-content: center
     align-items: center
   &__form
+    margin: 0 auto
+    width: auto
     position: relative
-    &-decorate
-      z-index: 0
+  &__decorate
+    z-index: 0
+    position: absolute
+    top: 25px
+    bottom: 30px
+    left: -33px
+    right: -33px
+    border-left: 1px solid rgba(255, 255, 255, 0.3)
+    border-right: 1px solid rgba(255, 255, 255, 0.3)
+    &:before, &:after
+      content: ''
+      display: block
       position: absolute
-      top: 25px
-      bottom: 30px
-      left: -33px
-      right: -33px
-      border-left: 1px solid rgba(256, 256, 256, 0.3)
-      border-bottom: 1px solid rgba(256, 256, 256, 0.3)
-      border-right: 1px solid rgba(256, 256, 256, 0.3)
-      &:before, &:after
-        content: ''
-        display: block
-        position: absolute
-        top: 0
-        width: 18px
-        height: 1px
-        background: rgba(256, 256, 256, 0.3)
-      &:before
-        left: 0
-      &:after
-        right: 0px
+      top: 0
+      width: 18px
+      height: 1px
+      background: rgba(256, 256, 256, 0.3)
+    &:before
+      left: 0
+    &:after
+      right: 0px
+  &__bottom-decorate
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      width: 18px
+      height: 1px
+      background: rgba(256, 256, 256, 0.3)
+      width: 36.5%
+    &:before
+      left: 0
+    &:after
+      right: 0
   &__input-wrap
     z-index: 2
     position: relative
@@ -114,9 +126,8 @@ body
     justify-content: center
     align-items: center
   &__input
-    padding: 17px 0 20px 25px
+    padding: 17px 0 19px 25px
     width: 290px
-    box-sizing: border-box
     border-radius: 26px
     border: none
     &,&::placeholder
@@ -135,8 +146,7 @@ body
     color: #ffffff
     text-align: center
   &__down-link
-    margin-top: auto
-    margin-bottom: 40px
+    margin-bottom: 5vh
     display: flex
     justify-content: center
 .down-link
@@ -155,12 +165,12 @@ body
     position: absolute
     left: 50%
     transform: translateX(-50%)
-    top: 20%
+    top: 30%
     width: 7px
     height: 7px
     background: #fff
     border-radius: 4px
-    animation-duration: 1.5s
+    animation-duration: 1s
     animation-iteration-count: infinite
     animation-name: scroll
 @keyframes scroll
@@ -204,7 +214,26 @@ body
     display: block
     width: 46px
     height: 21px
-    background: #ffffff
+    position: relative
+    span
+      top: 50%
+      position: absolute
+      transform: translateY(-50%)
+      &:before
+        transform: translateY(-8px)
+      &:after
+        transform: translateY(8px)
+      &:before, &:after, &
+        width: 100%
+        height: 3px
+        left: 0
+        border-radius: 1px
+        background: #ffffff
+      &:before, &:after
+        content: ''
+        display: block
+        position: absolute
+
   &__text
     font-size: 12px
     text-transform: uppercase
@@ -217,6 +246,5 @@ body
     margin-right: 10px
   &__text
     font-size: 28px
-    font-family: "Roboto"
     font-weight: 800
     color: #ffffff
