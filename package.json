@@ -21,6 +21,6 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^2.0.0",
-		"mmenu-js": "git+https://github.com/FrDH/mmenu-js.git"
+		"slideout": "^1.0.1"
 	}
 }
