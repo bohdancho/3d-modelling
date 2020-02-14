@@ -81,6 +81,10 @@ body
     @media screen and (max-width: $sm)
       width: 252px
       bottom: -14px
+  &_white
+    color: #ffffff
+    &:after
+      background-color: #ffffff
 
 
 
@@ -541,3 +545,131 @@ body
         display: none
         @media screen and (max-width: $xs)
           display: block
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+
+.calculate
+  padding: 65px 0
+  background: #4b4c49 url("../img/@2x/calculate/calculate-bg.jpg") center center no-repeat
+  background-size: cover
+  color: #ffffff
+  &__title
+    margin-bottom: 56px
+  &__text
+    margin-bottom: 39px
+    text-align: center
+  &__inner
+    display: flex
+    justify-content: space-between
+
+.calculator
+  width: 654px
+  &__block:first-child
+    margin-bottom: 22px
+  &-block
+    padding: 22px
+    border: 1px solid #ffffff
+    border-radius: 3px
+    &__title
+      margin-bottom: 43px
+  &-radios
+    height: 23px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 5px
+      width: calc(100% - 10px)
+      height: 50%
+      background: rgba(255, 255, 255, 0.5) center center no-repeat
+      background-size: 100% 100%
+  &__radio
+    &-input
+      position: absolute
+      visibility: hidden
+      top: 20px
+      &2
+        left: 10px
+      &3
+        left: 20px
+      &4
+        left: 30px
+    &-input1:checked ~ &-slider
+      animation-name: input1
+      left: 0
+      transform: translate(0, -50%)
+    &-input2:checked ~ &-slider
+      animation-name: input2
+      left: 33%
+    &-input3:checked ~ &-slider
+      animation-name: input3
+      left: 66%
+    &-input4:checked ~ &-slider
+      animation-name: input4
+      left: 100%
+      transform: translate(-100%, -50%)
+    &-label
+      width: 18px
+      height: 18px
+      display: block
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)  
+      background: #ffffff
+      border-radius: 50%
+      z-index: 1
+      cursor: pointer
+      &1
+        left: 0
+        transform: translate(0, -50%)
+      &2
+        left: 33%
+      &3
+        left: 66%
+      &4
+        left: 100%
+        transform: translate(-100%, -50%)
+    &-slider
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 23px
+      height: 23px
+      border: 9px solid $accent
+      transition: transform 1s
+      border-radius: 50%
+      animation-timing-function:  ease-in-out
+      animation-duration: .3s
+      animation-fill-mode: forwards
+      transition: 0.5s ease-in-out
+      z-index: 2
+    &-descr
+      font-size: 16px
+      position: absolute
+      top: -20px
+      &1
+        left: 0
+      &2
+        left: 33%
+        transform: translateX(-50%)
+      &3
+        left: 66%
+        transform: translateX(-50%)
+      &4
+        right: 0

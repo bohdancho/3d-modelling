@@ -9,7 +9,11 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
 	slideout.toggle();
 });
 
-document.querySelector('.menu__link').addEventListener('click', slideClose);
+document.querySelectorAll('.menu__link').forEach(function(elem) {
+	elem.addEventListener('click', function() {
+		slideout.close();
+	});
+});
 
 slideout
 	.on('beforeopen', function() {
@@ -18,7 +22,7 @@ slideout
 	.on('open', function() {
 		this.panel.addEventListener('click', slideClose);
 	})
-	.on('beforeclose', function() {
+	.on('close', function() {
 		this.panel.classList.remove('panel-open');
 		this.panel.removeEventListener('click', slideClose);
 	});
@@ -27,3 +31,11 @@ function slideClose(eve) {
 	eve.preventDefault();
 	slideout.close();
 }
+
+
+
+document.querySelectorAll('.smooth-scroll').forEach(elem, function() {
+	addEventListener('click', function(event) {
+		event.preventDefault();
+	});
+});
