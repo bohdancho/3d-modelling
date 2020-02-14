@@ -5,6 +5,7 @@ var gulp         = require('gulp'),
 		uglify       = require('gulp-uglify-es').default,
 		cleancss     = require('gulp-clean-css'),
 		rename       = require('gulp-rename'),
+		gcmq         = require('gulp-group-css-media-queries'),
 		autoprefixer = require('gulp-autoprefixer'),
 		rsync        = require('gulp-rsync'),
 		newer        = require('gulp-newer'),
@@ -31,6 +32,7 @@ gulp.task('styles', function() {
 		outputStyle: 'expanded',
 		includePaths: [__dirname + '/node_modules']
 	}))
+	.pipe(gcmq())
 	.pipe(concat('styles.min.css'))
 	.pipe(autoprefixer({
 		// grid: true, // Optional. Enable CSS Grid

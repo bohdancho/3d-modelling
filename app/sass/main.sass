@@ -3,35 +3,39 @@
 @import libs
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	font-family: 'Roboto', serif
-	font-weight: 200
-	color: #ffffff
-	line-height: 1
-	font-size: 18px
-	overflow-x: hidden
+  min-width: 320px
+  position: relative
+  font-family: 'Roboto', serif
+  font-weight: 200
+  color: #ffffff
+  line-height: 1
+  font-size: 18px
   box-sizing: border-box
-	color: $text
-    
+  color: $text
+  @media screen and (max-width: $md)
+    font-size: 16px
+  @media screen and (max-width: $sm)
+    font-size: 14px
+
 .container
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1170px;
-  @media screen and (max-width: 1200px)
-    width: 970px;
-  @media screen and (max-width: 992px)
-    width: 750px;
-  @media screen and (max-width: 768px)
-    width: 100%
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+  width: 100%
+  max-width: 1170px
+  @media screen and (max-width: $lg)
+    max-width: 960px
+  @media screen and (max-width: $md)
+    max-width: 720px
+  @media screen and (max-width: $sm)
+    max-width: 540px
+  @media screen and (max-width: $xs)
+    max-width: 100%
 
 //===================================================================================
 
 .accent-btn
-  padding: 23px 51px
   font-size: 16px
   font-weight: 500
   color: #ffffff
@@ -56,21 +60,49 @@ body
     display: flex
     flex-direction: column
     justify-content: center
+    @media screen and (max-width: $md)
+      padding: 15px 0
   &__title
+    margin-left: auto
+    margin-right: auto
     margin-bottom: 38px
+    max-width: 800px
     font-weight: 700
     font-size: 48px
     color: #ffffff
     text-align: center
+    @media screen and (max-width: $md)
+      margin-bottom: 20px
+      max-width: 600px
+      font-size: 36px
+    @media screen and (max-width: $sm)
+      margin-bottom: 15px
+      font-size: 30px
+    @media screen and (max-width: $xs)
+      max-width: 250px
+      // font-size: 24px
   &__subtitle
-    margin-top: 7px
     font-size: 36px
+    @media screen and (max-width: $md)
+      font-size: 28px
+    @media screen and (max-width: $sm)
+      font-size: 24px
+    @media screen and (max-width: $xs)
+      font-size: 20px
   &__text
     margin-bottom: 46px
     font-size: 22px
     font-weight: 100
     color: #ffffff
     text-align: center
+    @media screen and (max-width: $md)
+      margin-bottom: 25px
+      font-size: 18px
+    @media screen and (max-width: $sm)
+      margin-bottom: 20px
+      font-size: 16px
+    @media screen and (max-width: $xs)
+      font-size: 14px
   &__sup
     vertical-align: top
     font-size: 0.6em
@@ -79,9 +111,9 @@ body
     display: flex
     justify-content: center
     align-items: center
+    @media screen and (max-width: $md)
+      margin-bottom: 15px
   &__form
-    margin: 0 auto
-    width: auto
     position: relative
   &__decorate
     z-index: 0
@@ -92,6 +124,11 @@ body
     right: -33px
     border-left: 1px solid rgba(255, 255, 255, 0.3)
     border-right: 1px solid rgba(255, 255, 255, 0.3)
+    @media screen and (max-width: $lg)
+      bottom: 27px
+    @media screen and (max-width: $xs)
+      top: 19px
+      bottom: 22px
     &:before, &:after
       content: ''
       display: block
@@ -110,10 +147,13 @@ body
       display: block
       position: absolute
       bottom: 0
-      width: 18px
       height: 1px
       background: rgba(256, 256, 256, 0.3)
       width: 36.5%
+      @media screen and (max-width: $lg)
+        width: 33.5%
+      @media screen and (max-width: $sm)
+        width: 18px
     &:before
       left: 0
     &:after
@@ -125,15 +165,30 @@ body
     display: flex
     justify-content: center
     align-items: center
+    @media screen and (max-width: $sm)
+      flex-direction: column
+    @media screen and (max-width: $sm)
+      margin-bottom: 9px
   &__input
     padding: 17px 0 19px 25px
     width: 290px
     border-radius: 26px
     border: none
+    @media screen and (max-width: $lg)
+      width: 210px
+    @media screen and (max-width: $sm)
+      padding: 17px 25px
+    @media screen and (max-width: $xs)
+      padding: 12px 20px
+    @media screen and (max-width: $xs)
+      display: block
+      width: 100%
     &,&::placeholder
       font-size: 13px
       font-weight: 200
       color: #606060
+      @media screen and (max-width: $sm)
+        text-align: center
     &::placeholder
       transition: 0.5s ease
       opacity: 1
@@ -141,24 +196,44 @@ body
       opacity: 0
     &:not(:last-child)
       margin-right: 9px
+      @media screen and (max-width: $sm)
+        margin-right: 0
+        margin-bottom: 9px
   &__submit-wrap
     position: relative
     z-index: 2
     text-align: center
+  &__submit
+    padding: 23px 51px
+    @media screen and (max-width: $lg)
+      font-size: 14px
+      padding: 20px 45px
+    @media screen and (max-width: $xs)
+      padding: 15px 30px
+    @media screen and (max-width: $xs)
+      padding: 15px 0
+      width: 100%
+      display: block
   &__descr
     font-size: 14px
     font-weight: 200
     color: #ffffff
     text-align: center
+    @media screen and (max-width: $sm)
+      font-size: 12px
   &__down-link
     margin-bottom: 5vh
     display: flex
     justify-content: center
+
 .down-link
-  display: block
   width: 31px
   height: 55px
+  display: block
   position: relative
+  @media screen and (max-width: $lg)
+    width: 25px
+    height: 44px
   &__icon
     display: block
     height: 100%
@@ -178,6 +253,9 @@ body
     animation-duration: 1s
     animation-iteration-count: infinite
     animation-name: scroll
+    @media screen and (max-width: $lg)
+      width: 6px
+      height: 6px
 @keyframes scroll
   0%
     opacity: 1
@@ -191,26 +269,50 @@ body
   display: flex
   justify-content: space-between
   align-items: center
+  @media screen and (max-width: $lg)
+    padding: 20px 0
+  @media screen and (max-width: $md)
+    padding: 10px 0
+  @media screen and (max-width: $sm)
+    padding: 8px 0
   &__inner
     display: flex
     align-items: center
   &__phone
     margin-right: 60px
-
-.phone
+    @media screen and (max-width: $lg)
+      margin-right: 35px
+    @media screen and (max-width: $md)
+      margin-right: 20px
+    @media screen and (max-width: $xs)
+      margin-right: 10px
+.topnav-phone
   display: flex
   align-items: center
   color: #ffffff
   &__img
     margin-right: 13px
+    @media screen and (max-width: $md)
+      margin-right: 5px
+    @media screen and (max-width: $sm)
+      margin-right: 3px
+      width: 20px
+      display: none
   &__descr
     margin-bottom: 5px
     font-size: 12px
     font-weight: 200
+    @media screen and (max-width: $md)
+      margin-bottom: 3px
+    @media screen and (max-width: $sm)
+      font-size: 10px
   &__text
     font-size: 21px
     font-weight: 500
-
+    @media screen and (max-width: $md)
+      font-size: 18px
+    @media screen and (max-width: $sm)
+      font-size: 15px
 .menu-btn
   display: block
   text-align: center
@@ -220,20 +322,29 @@ body
     width: 46px
     height: 21px
     position: relative
+    @media screen and (max-width: $xs)
+      width: 30px
+      height: 14px
     span
       top: 50%
       position: absolute
       transform: translateY(-50%)
       &:before
         transform: translateY(-8px)
+        @media screen and (max-width: $xs)
+          transform: translateY(-6px)
       &:after
         transform: translateY(8px)
+        @media screen and (max-width: $xs)
+          transform: translateY(6px)
       &:before, &:after, &
         width: 100%
         height: 3px
         left: 0
         border-radius: 1px
         background: #ffffff
+        @media screen and (max-width: $xs)
+          height: 2px    
       &:before, &:after
         content: ''
         display: block
@@ -242,23 +353,34 @@ body
     font-size: 12px
     text-transform: uppercase
     color: #ffffff
+    @media screen and (max-width: $xs)
+      font-size: 10px
 
 .logo
   display: flex
   align-items: center
   &__img
+    width: 50px
     margin-right: 10px
+    @media screen and (max-width: $md)
+      margin-right: 7px
+    @media screen and (max-width: $sm)
+      margin-right: 4px
+      width: 40px
   &__text
     font-size: 28px
     font-weight: 800
     color: #ffffff
+    @media screen and (max-width: $md)
+      font-size: 24px
+    @media screen and (max-width: $sm)
+      font-size: 20px
 
 .menu
   overflow: hidden
   background: #282828
   color: #ffffff
   &__list
-    // padding: 0 20px
     height: 100%
     display: flex
     flex-direction: column
@@ -271,11 +393,15 @@ body
     display: flex
     align-items: center
     justify-content: center
-    font-size: 20px
+    font-size: 24px
     border-bottom: 1px solid transparent
     border-top: 1px solid transparent
     transition: 0.5s ease
-    &:hover, &:focus
+    @media screen and (max-width: $sm)
+      font-size: 20px
+    @media screen and (max-width: $xs)
+      font-size: 18px
+    &:hover, &:focus, &_active
       color: $accent
       border-top: 1px solid $accent
       border-bottom: 1px solid $accent
