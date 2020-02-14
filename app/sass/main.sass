@@ -23,28 +23,74 @@ body
   padding-right: 15px
   padding-left: 15px
   width: 100%
-  max-width: 1170px
+  max-width: 1140px
+  box-sizing: inherit
   @media screen and (max-width: $lg)
-    max-width: 960px
+    max-width: 930px
   @media screen and (max-width: $md)
-    max-width: 720px
+    max-width: 690px
   @media screen and (max-width: $sm)
-    max-width: 540px
+    max-width: 510px
   @media screen and (max-width: $xs)
     max-width: 100%
 
-//===================================================================================
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
 
 .accent-btn
-  font-size: 16px
-  font-weight: 500
+  font-size: 14px
+  font-weight: 400
   color: #ffffff
   background-color: $accent
   border: none
   border-radius: 30px
   cursor: pointer
+  &_bolder
+    font-weight: 500
+    font-size: 16px
 
-//===================================================================================
+.title
+  font-size: 36px
+  color: #363636
+  text-align: center
+  position: relative
+  @media screen and (max-width: $md)
+    font-size: 28px
+  @media screen and (max-width: $sm)
+    font-size: 24px
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    height: 1px
+    width: 377px
+    background-color: $accent
+    bottom: -24px
+    left: 50%
+    transform: translateX(-50%)
+    @media screen and (max-width: $md)
+      width: 293px
+      bottom: -18px
+    @media screen and (max-width: $sm)
+      width: 252px
+      bottom: -14px
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
 
 .header
   background: #595345 url("../img/@2x/header/header-bg.jpg") center center no-repeat
@@ -405,3 +451,93 @@ body
       color: $accent
       border-top: 1px solid $accent
       border-bottom: 1px solid $accent
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+.services
+  background-color: #ffffff
+  padding: 61px 0 72px
+  @media screen and (max-width: $lg)
+    padding: 40px 0 55px
+  &__title
+    margin-bottom: 58px        
+  &__item
+    &:not(:last-child)
+      margin-bottom: 20px
+      @media screen and (max-width: $sm)
+        margin-bottom: 10px
+      @media screen and (max-width: $xs)
+        margin-bottom: 20px
+  &-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media screen and (max-width: $xs)
+      flex-direction: column
+    &_reverse
+      flex-direction: row-reverse
+    &__textblock, &__img
+      max-width: calc((100% - 30px) / 2)
+      @media screen and (max-width: $sm)
+        max-width: calc((100% - 15px) / 2)
+      @media screen and (max-width: $xs)
+        max-width: 100%
+    &__textblock
+      @media screen and (max-width: $xs)
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__img
+      display: block
+      @media screen and (max-width: $xs)
+        margin-bottom: 10px
+    &__title
+      margin-bottom: 13px
+      font-size: 28px
+      font-weight: 200
+      color: $accent
+      @media screen and (max-width: $lg)
+        margin-bottom: 10px
+        font-size: 24px
+      @media screen and (max-width: $md)
+        font-size: 22px
+      @media screen and (max-width: $sm)
+        font-size: 20px
+      @media screen and (max-width: $xs)
+        text-align: center
+    &__text
+      font-weight: 100
+      color: #464646
+      line-height: 1.33
+      margin-bottom: 20px
+      @media screen and (max-width: $lg)
+        margin-bottom: 14px
+      @media screen and (max-width: $md)
+        margin-bottom: 10px
+      @media screen and (max-width: $sm)
+        margin-bottom: 6px
+      @media screen and (max-width: $xs)
+        text-align: center
+    &__btn
+      padding: 20px 36px
+      @media screen and (max-width: $lg)
+        padding: 16px 28px
+      @media screen and (max-width: $md)
+        padding: 14px 26px
+      @media screen and (max-width: $sm)
+        padding: 10px 20px
+      &_in
+        @media screen and (max-width: $xs)
+          display: none
+      &_out
+        display: none
+        @media screen and (max-width: $xs)
+          display: block
