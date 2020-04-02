@@ -22,6 +22,7 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^2.0.0",
+		"odometer": "git+https://github.com/HubSpot/odometer.git",
 		"slideout": "^1.0.1"
 	},
 	"dependencies": {}

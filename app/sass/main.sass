@@ -569,6 +569,26 @@ body
   &__inner
     display: flex
     justify-content: space-between
+  &__info
+    flex-grow: 1
+    text-align: center
+    &-item
+      margin-bottom: 24px
+    &-title
+      margin-bottom: 7px
+      font-size: 16px
+      font-weight: 400
+    &-num
+      font-size: 32px
+      font-weight: 400
+    &-btn
+      margin: 10px 0 20px
+      padding: 16px 32px
+    &-descr
+      margin-bottom: 5px
+      font-size: 14px
+    &-phone
+      font-weight: 500
 
 .calculator
   width: 654px
@@ -579,7 +599,11 @@ body
     border: 1px solid #ffffff
     border-radius: 3px
     &__title
-      margin-bottom: 43px
+      font-weight: 400
+      &_top
+        margin-bottom: 43px
+      &_bot
+        margin-bottom: 19px
   &-radios
     height: 23px
     display: flex
@@ -653,10 +677,7 @@ body
       border: 9px solid $accent
       transition: transform 1s
       border-radius: 50%
-      animation-timing-function:  ease-in-out
-      animation-duration: .3s
-      animation-fill-mode: forwards
-      transition: 0.5s ease-in-out
+      transition: 0.5s ease-in
       z-index: 2
     &-descr
       font-size: 16px
@@ -672,3 +693,60 @@ body
         transform: translateX(-50%)
       &4
         right: 0
+  &__btns
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__btn
+    max-width: 32%
+    width: 193px
+    position: relative
+    &-label
+      padding: 15px 0
+      display: block
+      border: 1px solid #ffffff
+      border-radius: 3px
+      font-size: 16px
+      font-weight: 400
+      text-align: center
+      transition: 0.4s ease-in
+      cursor: pointer
+    &-input
+      position: absolute
+      visibility: hidden
+    &-input:checked + &-label
+      border-color: $accent 
+      background-color: $accent
+      cursor: auto
+    &-label:hover + &-descr
+      opacity: 1
+    &-descr
+      padding: 25px
+      width: 443px
+      position: absolute
+      bottom: -132px
+      left: 50%
+      border-radius: 4px
+      transform: translateX(-50%)
+      opacity: 0
+      font-size: 14px
+      font-weight: 400
+      line-height: 1.7
+      color: #464646
+      text-align: center
+      background: #ffffff
+      transition: 0.4s ease-in
+      &:before
+        content: ''
+        width: 0px
+        height: 0px
+        position: absolute
+        top: -23px
+        left: 50%
+        transform: translateX(-50%)
+        border-style: solid
+        border-width: 0 24px 24px 24px
+        border-color: transparent transparent #ffffff transparent  
+        display: inline-block
+        vertical-align: middle
+        margin-right: 5px

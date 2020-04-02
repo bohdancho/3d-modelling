@@ -180,30 +180,30 @@
             <div class="calculate__inner">
               <div class="calculate__calculator calculator">
                 <div class="calculator__block calculator-block">
-                  <div class="calculator-block__title">
+                  <div class="calculator-block__title calculator-block__title_top">
                     Площадь помещения:
                   </div>
                   <div class="calculator-radios">
                     <div class="calculator__radio-descr calculator__radio-descr1">
-                      100м<span class="sup">2</span>
+                      100 м<span class="sup">2</span>
                     </div>
                     <label class="calculator__radio-label calculator__radio-label1" for="calculator-radio1"></label>
                     <input class="calculator__radio-input calculator__radio-input1" id="calculator-radio1" name="radio" type="radio">
 
                     <div class="calculator__radio-descr calculator__radio-descr2">
-                      10 000м<span class="sup">2</span>
+                      10 000 м<span class="sup">2</span>
                     </div>
                     <label class="calculator__radio-label calculator__radio-label2" for="calculator-radio2"></label>
                     <input class="calculator__radio-input calculator__radio-input2" id="calculator-radio2" checked name="radio" type="radio">
                     
                     <div class="calculator__radio-descr calculator__radio-descr3">
-                      250 000м<span class="sup">2</span>
+                      25 000 м<span class="sup">2</span>
                     </div>
                     <label class="calculator__radio-label calculator__radio-label3" for="calculator-radio3"></label>
                     <input class="calculator__radio-input calculator__radio-input3" id="calculator-radio3" name="radio" type="radio">
                     
                     <div class="calculator__radio-descr calculator__radio-descr4">
-                      500 000м<span class="sup">2</span>
+                      50 000 м<span class="sup">2</span>
                     </div>
                     <label class="calculator__radio-label calculator__radio-label4" for="calculator-radio4"></label>
                     <input class="calculator__radio-input calculator__radio-input4" id="calculator-radio4" name="radio" type="radio">
@@ -212,17 +212,74 @@
                   </div>
                 </div>
                 <div class="calculator__block calculator-block">
-                  <div class="calculator-block__title">
+                  <div class="calculator-block__title calculator-block__title_bot">
                     Выберите пакет:
                   </div>
                   <div class="calculator__btns">
-                    <label class="calculator__radio-label" for="radio1"></label>
-                    <input class="calculator__radio-input" id="radio1" name="radio" type="radio">
+                    <div class="calculator__btn">
+                      <input class="calculator__btn-input" id="calculator-btn1" name="btn" type="radio">
+                      <label class="calculator__btn-label" for="calculator-btn1">Light</label>
+                      <div class="calculator__btn-descr">
+                        План расстановки мебели 3D визуализация. 
+                        Все рабочие чертежи (план полов, план потолка, 
+                        развертки по стенам, план электросетей)
+                      </div>
+                    </div>
+                    
+                    <div class="calculator__btn">
+                      <input class="calculator__btn-input" id="calculator-btn2" checked name="btn" type="radio">
+                      <label class="calculator__btn-label" for="calculator-btn2">Medium</label>
+                      <div class="calculator__btn-descr">
+                        План расстановки мебели 3D визуализация. 
+                        Все рабочие чертежи (план полов, план потолка, 
+                        развертки по стенам, план электросетей)
+                      </div>
+                    </div>
+
+                    <div class="calculator__btn">
+                      <input class="calculator__btn-input" id="calculator-btn3" name="btn" type="radio">
+                      <label class="calculator__btn-label" for="calculator-btn3">Full</label>
+                      <div class="calculator__btn-descr">
+                        План расстановки мебели 3D визуализация. 
+                        Все рабочие чертежи (план полов, план потолка, 
+                        развертки по стенам, план электросетей)
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="calculate-info">
-                
+              <div class="calculate__info">
+                <div class="calculate__info-item">
+                  <div class="calculate__info-title">
+                    Площадь помещения:
+                  </div>
+                  <div class="calculate__info-num">
+                    <span class="calculate__info-area">10 000</span> м<span class="sup">2</span>
+                  </div>  
+                </div>
+                <div class="calculate__info-item">
+                  <div class="calculate__info-title">
+                    Средняя стоимость м<span class="sup">2</span>:
+                  </div>
+                  <div class="calculate__info-num">
+                    <span class="calculate__info-cost-avg">4 850</span> тг.
+                  </div>  
+                </div>
+                <div class="calculate__info-item">
+                  <div class="calculate__info-title">
+                    Средняя стоимость объекта:
+                  </div>
+                  <div class="calculate__info-num">
+                    <span class="calculate__info-cost-sum">48 500</span> тг.
+                  </div>  
+                </div>
+                <button class="accent-btn calculate__info-btn">
+                  Получить консультацию специалиста
+                </button>
+                <div class="calculate__info-descr">
+                  или позволните нам по телефону:
+                </div>
+                <a href="tel:77273887177" class="calculate__info-phone">+ 7 727 388 71 77</a>
               </div>
             </div>
           </div>

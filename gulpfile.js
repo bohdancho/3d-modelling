@@ -49,6 +49,7 @@ gulp.task('scripts', function() {
 		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'app/js/_libs.js', // JS libraries (all in one)
 		'node_modules/slideout/dist/slideout.js',
+		'node_modules/odometer/odometer.js',
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
