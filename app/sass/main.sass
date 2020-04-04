@@ -604,48 +604,64 @@ body
         margin-bottom: 43px
       &_bot
         margin-bottom: 19px
-  &-radios
+  &-range
     height: 23px
     display: flex
     justify-content: space-between
     align-items: center
     position: relative
-    &:before
-      content: ''
-      display: block
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      left: 5px
-      width: calc(100% - 10px)
-      height: 50%
-      background: rgba(255, 255, 255, 0.5) center center no-repeat
-      background-size: 100% 100%
-  &__radio
-    &-input
-      position: absolute
-      visibility: hidden
-      top: 20px
-      &2
-        left: 10px
-      &3
-        left: 20px
-      &4
-        left: 30px
-    &-input1:checked ~ &-slider
-      animation-name: input1
-      left: 0
-      transform: translate(-3px, -50%)
-    &-input2:checked ~ &-slider
-      animation-name: input2
-      left: 33%
-    &-input3:checked ~ &-slider
-      animation-name: input3
-      left: 66%
-    &-input4:checked ~ &-slider
-      animation-name: input4
-      left: 100%
-      transform: translate(calc(-100% + 3px), -50%)
+  &__range
+    z-index: 1
+    height: 38px
+    -webkit-appearance: none
+    margin: 10px 0
+    background: none
+    width: 100%
+    &:focus 
+      outline: none
+    &::-webkit-slider-runnable-track 
+      width: 100%
+      height: 11px
+      cursor: pointer
+      animate: 0.2s
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 10px
+    &::-webkit-slider-thumb 
+      border: 9px solid #19B5FE
+      height: 23px
+      width: 23px
+      border-radius: 50%
+      transform: translate(0, 4px)
+      cursor: pointer
+      -webkit-appearance: none
+      margin-top: -10.5px
+    &:focus::-webkit-slider-runnable-track 
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 10px
+    &::-moz-range-track 
+      width: 100%
+      height: 11px
+      cursor: pointer
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 10px
+    &::-moz-range-thumb, &::-ms-thumb
+      border: 9px solid #19B5FE
+      height: 23px
+      width: 23px
+      border-radius: 50%
+      transform: translate(0, 4px)
+      cursor: pointer
+    &::-ms-track 
+      width: 100%
+      height: 11px
+      cursor: pointer
+      animate: 0.2s
+    &::-ms-fill-lower,
+    &::-ms-fill-upper,
+    &:focus::-ms-fill-lower,
+    &:focus::-ms-fill-upper
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 10px
     &-label
       width: 18px
       height: 18px
