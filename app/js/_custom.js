@@ -45,7 +45,7 @@ function slideClose(eve) {
 
 // Calculator
   function calculate() {
-    const selectedRadio = document.querySelector('.calculator__radio-input:checked'),
+    const rangeElem = document.querySelector('.calculator__range'),
         selectedBtn = document.querySelector('.calculator__btn-input:checked'),
         areaElem      = document.querySelector('.calculate__info-area'),
         costAvgElem   = document.querySelector('.calculate__info-cost-avg'),
@@ -68,40 +68,52 @@ function slideClose(eve) {
           cost: 2500000
         }],
         costInputArr = [0.75, 1, 1.25];
-
       
-    const selectedRadioNum = selectedRadio.id.slice(-1);
-    const selectedBtnNum = selectedBtn.id.slice(-1);	
+    const rangeSelectedIndex = getCheckpointIndex(+rangeElem.value);    
+    const selectedBtnIndex = selectedBtn.id.slice(-1);	
 
-    const selectedRadioInfo = costRadioArr[ selectedRadioNum - 1 ];
-    const selectedBtnInfo = costInputArr[ selectedBtnNum - 1 ];
+    const rangeInfo = costRadioArr[rangeSelectedIndex];
+    const selectedBtnInfo = costInputArr[ selectedBtnIndex - 1 ];
 
-    areaElem.innerHTML    = selectedRadioInfo.text,
-    costAvgElem.innerHTML	= (selectedRadioInfo.cost * selectedBtnInfo / selectedRadioInfo.area).toFixed(2);
-    costSumElem.innerHTML = selectedRadioInfo.cost * selectedBtnInfo;
+    areaElem.innerHTML    = rangeInfo.text,
+    costAvgElem.innerHTML	= (rangeInfo.cost * selectedBtnInfo / rangeInfo.area).toFixed(2);
+    costSumElem.innerHTML = rangeInfo.cost * selectedBtnInfo;
   };
 
-  // document.querySelectorAll('.calculator__radio-input, .calculator__btn-input').forEach(function(elem) {
-  // 		elem.addEventListener('change', calculate);
-  // });
-  // calculate();	
+  document.querySelectorAll('.calculator__range, .calculator__btn-input').forEach(function(elem) {
+  		elem.addEventListener('change', calculate);
+  });
+  calculate();	
 // /Calculator
 
 
 document.querySelector('.calculator__range').addEventListener('change', e => {
   const range = e.target,
-        checkPoints = [0, 32, 66.5, 100],
-        distances = [];
-  let   filteredDistances,
-        checkPointIndex;
+        checkPoints = [0, 32, 66.5, 100];
+  let checkPointIndex,
+      currentPos = +range.value;
     
+  checkPointIndex = getCheckpointIndex(currentPos)
+  range.value = checkPoints[checkPointIndex];  
+});
+
+
+
+
+
+
+
+
+function getCheckpointIndex(pos) {
+  const checkPoints = [0, 32, 66.5, 100],
+        distances = [];
+  let filteredDistances;
   
-  checkPoints.forEach(e => {
-    distances.push( Math.abs(e - range.value) );
+  checkPoints.forEach(point => {
+    distances.push( Math.abs(point - pos) );
   });
   filteredDistances = Array.from(distances);
   filteredDistances.sort( (a, b) => a - b );
   
-  checkPointIndex = distances.indexOf( filteredDistances[0] );
-  range.value = checkPoints[checkPointIndex];
-});
+  return distances.indexOf( filteredDistances[0] );
+}
