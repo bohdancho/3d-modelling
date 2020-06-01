@@ -595,7 +595,7 @@ body
         align-items: flex-end
         justify-content: center
       @media screen and (max-width: $xs)
-        flex-wrap: wrap
+        flex-direction: column
         align-items: center
     &-item
       margin-bottom: 24px
@@ -783,10 +783,13 @@ body
     display: flex
     justify-content: space-between
     align-items: center
+    position: relative
   &__btn
     max-width: 32%
     width: 193px
     position: relative
+    @media screen and (max-width: $xs)
+      position: static
     &-label
       padding: 15px 0
       display: block
@@ -826,6 +829,16 @@ body
         padding: 10px
         width: 300px
         top: 75px
+      @media screen and (max-width: $sm)
+        width: 240px
+      @media screen and (max-width: $xs)
+        width: 100%
+        &1:before
+          left: calc(32% / 2)
+        &2:before
+          left: 50%
+        &3:before
+          left: calc(100% - (32% / 2) )
       &:before
         content: ''
         width: 0px
