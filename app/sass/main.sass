@@ -57,14 +57,17 @@ body
     font-size: 16px
 
 .title
+  padding-bottom: 24px
   font-size: 36px
   color: #363636
   text-align: center
   position: relative
   @media screen and (max-width: $md)
     font-size: 28px
+    padding-bottom: 18px
   @media screen and (max-width: $sm)
     font-size: 24px
+    padding-bottom: 14px
   &:after
     content: ''
     position: absolute
@@ -72,15 +75,13 @@ body
     height: 1px
     width: 377px
     background-color: $accent
-    bottom: -24px
+    bottom: 0
     left: 50%
     transform: translateX(-50%)
     @media screen and (max-width: $md)
       width: 293px
-      bottom: -18px
     @media screen and (max-width: $sm)
       width: 252px
-      bottom: -14px
   &_white
     color: #ffffff
     &:after
@@ -471,7 +472,7 @@ body
   @media screen and (max-width: $lg)
     padding: 40px 0 55px
   &__title
-    margin-bottom: 58px        
+    margin-bottom: 34px   
   &__item
     &:not(:last-child)
       margin-bottom: 20px
@@ -562,11 +563,11 @@ body
   background-size: cover
   color: #ffffff
   &__title
-    margin-bottom: 56px
+    margin-bottom: 32px
     @media screen and (max-width: $lg)
-      margin-bottom: 36px
+      margin-bottom: 18px
     @media screen and (max-width: $md)
-      margin-bottom: 30px
+      margin-bottom: 16px
   &__text
     margin-bottom: 39px
     text-align: center
@@ -874,7 +875,7 @@ body
   @media screen and (max-width: $lg)
     padding: 40px 0 55px
   &__title
-    margin-bottom: 58px
+    margin-bottom: 25px
   &__btn-wrap
     margin-bottom: 25px
     display: flex
