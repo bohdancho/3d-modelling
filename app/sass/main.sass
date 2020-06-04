@@ -889,7 +889,10 @@ body
     @media screen and (max-width: $xs)
       margin-bottom: 15px
   &__btn 
-    padding: 16px 35px 14px
+    width: 24%
+    text-align: center
+    
+    padding: 16px 4px 14px
     cursor: pointer
     color: $accent
     background: transparent
@@ -900,11 +903,13 @@ body
     text-transform: uppercase
     transition: 0.2s ease
     @media screen and (max-width: $md)
-      padding: 14px 8px 12px
+      padding: 8px 4px 7px
     @media screen and (max-width: $sm)
       font-size: 11px
-    @media screen and (max-width: 370px)
-      padding: 8px 4px 7px
+    @media screen and (max-width: $xs)
+      padding: 8px 0 7px
+      width: 33%
+      min-height: 40px 
     &:first-child
       border-left: 1px solid
       border-top-left-radius: 22px
