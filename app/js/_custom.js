@@ -117,3 +117,47 @@ function getCheckpointIndex(pos) {
   
   return distances.indexOf( filteredDistances[0] );
 }
+
+
+
+
+let iso = new Isotope( '.portfolio__img-wrap', {
+  itemSelector: '.portfolio__img',
+  layoutMode: 'fitRows'
+});
+
+iso.arrange({ filter: ".z-in" });
+
+// bind filter button click
+let filtersElem = document.querySelector('.portfolio__btn-wrap');
+filtersElem.addEventListener( 'click', function( event ) {
+  // only work with buttons
+  if ( !matchesSelector( event.target, 'button' ) ) {
+    return;
+  }
+
+  let filterValue = event.target.getAttribute('data-filter');
+  
+  // use matching filter function
+  iso.arrange({ filter: filterValue });
+});
+
+
+
+// change is-checked class on buttons
+let buttonGroups = document.querySelectorAll('.portfolio__btn-wrap');
+for (let i = 0, len = buttonGroups.length; i < len; i++) {
+  let buttonGroup = buttonGroups[i];
+  radioButtonGroup( buttonGroup );
+}
+
+function radioButtonGroup( buttonGroup ) {
+  buttonGroup.addEventListener( 'click', function( event ) {
+    // only work with buttons
+    if ( !matchesSelector( event.target, 'button' ) ) {
+      return;
+    }
+    buttonGroup.querySelector('.portfolio__btn_active').classList.remove('portfolio__btn_active');
+    event.target.classList.add('portfolio__btn_active');
+  });
+}

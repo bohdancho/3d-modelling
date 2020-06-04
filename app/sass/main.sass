@@ -856,3 +856,69 @@ body
         @media screen and (max-width: $lgx)
           border-width: 0 15px 15px 15px
           top: -14px
+
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+.portfolio
+  background-color: #ffffff
+  padding: 61px 0 30px
+  @media screen and (max-width: $lg)
+    padding: 40px 0 55px
+  &__title
+    margin-bottom: 58px
+  &__btn-wrap
+    margin-bottom: 25px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__btn 
+    padding: 16px 35px 14px
+    cursor: pointer
+    color: $accent
+    background: transparent
+    border-color: $accent
+    border-top: 1px solid
+    border-bottom: 1px solid
+    font-size: 14px
+    text-transform: uppercase
+    transition: 0.2s ease
+    &:first-child
+      border-left: 1px solid
+      border-top-left-radius: 22px
+      border-bottom-left-radius: 22px
+    &:last-child
+      border-right: 1px solid
+      border-top-right-radius: 22px
+      border-bottom-right-radius: 22px
+    &:not(:last-child)
+      position: relative 
+      &:after
+        content: ''
+        display: block
+        background-color: $accent
+        position: absolute
+        height: calc(100% - 6px)
+        width: 1px
+        right: -1px
+        top: 50%
+        transform: translateY(-50%)
+    &_active
+      background-color: $accent
+      // border-radius: 7px
+      border-top: 1px solid $accent
+      border-bottom: 1px solid $accent
+      color: #ffffff
+      &:after 
+        display: none !important
+  &__img
+    margin: 15px
+    width: calc(100% / 3 - 30px)
