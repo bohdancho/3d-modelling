@@ -24,6 +24,7 @@
 		"gulp-uglify-es": "^2.0.0"
 	},
 	"dependencies": {
+		"imagesloaded": "^4.1.4",
 		"isotope-layout": "^3.0.6",
 		"slideout": "^1.0.1"
 	}

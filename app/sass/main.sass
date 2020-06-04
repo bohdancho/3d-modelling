@@ -873,14 +873,21 @@ body
   background-color: #ffffff
   padding: 61px 0 30px
   @media screen and (max-width: $lg)
-    padding: 40px 0 55px
+    padding: 40px 0 25px
+  @media screen and (max-width: $sm)
+    padding: 35px 0 20px
   &__title
     margin-bottom: 32px
+    @media screen and (max-width: $sm)
+      margin-bottom: 25px
   &__btn-wrap
     margin-bottom: 10px
     display: flex
     justify-content: center
-    align-items: center
+    @media screen and (max-width: $sm)
+      margin-bottom: 7px
+    @media screen and (max-width: $xs)
+      margin-bottom: 15px
   &__btn 
     padding: 16px 35px 14px
     cursor: pointer
@@ -892,6 +899,12 @@ body
     font-size: 14px
     text-transform: uppercase
     transition: 0.2s ease
+    @media screen and (max-width: $md)
+      padding: 14px 8px 12px
+    @media screen and (max-width: $sm)
+      font-size: 11px
+    @media screen and (max-width: 370px)
+      padding: 8px 4px 7px
     &:first-child
       border-left: 1px solid
       border-top-left-radius: 22px
@@ -914,7 +927,6 @@ body
         transform: translateY(-50%)
     &_active
       background-color: $accent
-      // border-radius: 7px
       border-top: 1px solid $accent
       border-bottom: 1px solid $accent
       color: #ffffff
@@ -923,3 +935,12 @@ body
   &__img
     margin: 15px
     width: calc(100% / 3 - 30px)
+    @media screen and (max-width: $lg)
+      margin: 12px
+      width: calc(100% / 3 - 24px)
+    @media screen and (max-width: $md)
+      width: calc(100% / 2 - 24px)
+    @media screen and (max-width: $xs)
+      width: 80%
+      min-width: 300px
+      margin: 0 0 15px
