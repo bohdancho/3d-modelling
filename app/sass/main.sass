@@ -935,8 +935,9 @@ body
       border-top: 1px solid $accent
       border-bottom: 1px solid $accent
       color: #ffffff
-      &:after 
-        display: none !important
+      &:not(:last-child)
+        &:after 
+          display: none
   &__img
     margin: 15px
     width: calc(100% / 3 - 30px)
