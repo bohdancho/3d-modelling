@@ -1090,4 +1090,82 @@ body
     @media screen and (max-width: $xs)
       margin: 0
       &:not(:last-child)
-        margin-bottom: 20px        
+        margin-bottom: 20px
+
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+
+.team
+  padding: 50px 0
+  background-color: #ffffff
+  @media screen and (max-width: $xs)
+    padding: 35px 0
+  &__title
+    margin-bottom: 15px
+  &__list
+    margin-bottom: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+  &__item
+    margin: 25px 70px
+    text-align: center
+  &__img
+    margin: 0 auto 18px
+  &__surname
+    margin-bottom: 10px
+    font-size: 24px
+    color: $accent
+
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+
+.director-quote
+  margin: 0 auto
+  max-width: 945px
+  position: relative
+  text-align: center
+  &:before, &:after
+    content: ''
+    display: block
+    width: 47px
+    height: 37px
+    background: url("../img/@2x/team/quote.png") center center no-repeat
+    background-size: 100%
+    position: absolute
+  &:before
+    top: -12px
+    left: -98px
+  &:after
+    bottom: 0
+    right: -98px
+    transform: scale(-1, 1)
+  &__title
+    margin-bottom: 15px
+    font-size: 30px
+  &__text
+    margin-bottom: 12px
+  &__name
+    margin-bottom: 8px
+    font-weight: 500
+  &__job
+    font-size: 16px
