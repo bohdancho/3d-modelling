@@ -1117,11 +1117,25 @@ body
     justify-content: center
     align-items: center
     flex-wrap: wrap
+    @media screen and (max-width: $sm)
+      justify-content: space-between
+    @media screen and (max-width: $xs)
+      flex-direction: column
+      justify-content: flex-start
   &__item
     margin: 25px 70px
     text-align: center
+    @media screen and (max-width: $md)
+      margin: 25px 50px
+    @media screen and (max-width: $sm)
+      margin: 15px 0
+      width: calc(50% - 30px)
+    @media screen and (max-width: $xs)
+      width: 80%
   &__img
     margin: 0 auto 18px
+    @media screen and (max-width: $xs)
+      margin-bottom: 10px
   &__surname
     margin-bottom: 10px
     font-size: 24px
@@ -1144,6 +1158,15 @@ body
   max-width: 945px
   position: relative
   text-align: center
+  @media screen and (max-width: $lg)
+    max-width: 770px
+  @media screen and (max-width: $lg)
+    max-width: 570px    
+  @media screen and (max-width: $sm)
+    max-width: 390px
+  @media screen and (max-width: $xs)
+    min-width: 210px
+    width: 70%
   &:before, &:after
     content: ''
     display: block
@@ -1152,20 +1175,52 @@ body
     background: url("../img/@2x/team/quote.png") center center no-repeat
     background-size: 100%
     position: absolute
+    @media screen and (max-width: $lg)
+      width: 35px
+      height: 27px
+    @media screen and (max-width: $sm)
+      width: 30px
+      height: 23px
   &:before
     top: -12px
     left: -98px
+    @media screen and (max-width: $lg)
+      left: -80px
+    @media screen and (max-width: $lg)
+      left: -60px
+    @media screen and (max-width: $xs)
+      left: -40px
   &:after
     bottom: 0
     right: -98px
     transform: scale(-1, 1)
+    @media screen and (max-width: $lg)
+      right: -80px
+    @media screen and (max-width: $lg)
+      right: -60px
+    @media screen and (max-width: $xs)
+      right: -40px
   &__title
     margin-bottom: 15px
     font-size: 30px
+    @media screen and (max-width: $md)
+      margin-bottom: 10px
+      font-size: 25px
+    @media screen and (max-width: $sm)
+      margin-bottom: 10px
+      font-size: 20px
   &__text
     margin-bottom: 12px
+    @media screen and (max-width: $xs)
+      margin-bottom: 8px
   &__name
     margin-bottom: 8px
     font-weight: 500
+    @media screen and (max-width: $md)
+      margin-bottom: 5px
   &__job
     font-size: 16px
+    @media screen and (max-width: $md)
+      font-size: 15px
+    @media screen and (max-width: $xs)
+      font-size: 14px
