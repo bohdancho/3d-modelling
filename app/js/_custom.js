@@ -11,11 +11,13 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
   slideout.toggle();
 });
 
-document.querySelectorAll('.menu__link').forEach(function(elem) {
-  elem.addEventListener('click', function() {
+let menuLinks = document.querySelectorAll('.menu__link')
+for (let i = 0; i < menuLinks.length; i++) {
+
+  menuLinks[i].addEventListener('click', function() {
     slideout.close();
   });
-});
+};
 
 slideout
   .on('beforeopen', function() {
@@ -80,14 +82,15 @@ function slideClose(eve) {
     costSumElem.innerHTML = rangeInfo.cost * selectedBtnInfo;
   };
 
-  document.querySelectorAll('.calculator__range, .calculator__btn-input').forEach(function(elem) {
-  		elem.addEventListener('change', calculate);
-  });
+  let inputElems = document.querySelectorAll('.calculator__range, .calculator__btn-input')
+  for (let i = 0; i < inputElems.length; i++) {
+  	inputElems[i].addEventListener('change', calculate);
+  };
   calculate();	
 // /Calculator
 
 
-document.querySelector('.calculator__range').addEventListener('change', e => {
+document.querySelector('.calculator__range').addEventListener('change', function(e) {
   const range = e.target,
         checkPoints = [0, 32, 66.5, 100];
   let checkPointIndex,
@@ -109,11 +112,11 @@ function getCheckpointIndex(pos) {
         distances = [];
   let filteredDistances;
   
-  checkPoints.forEach(point => {
-    distances.push( Math.abs(point - pos) );
-  });
+  for (let i = 0; i < checkPoints.length; i++) {
+    distances.push( Math.abs(checkPoints[i] - pos) );
+  };
   filteredDistances = Array.from(distances);
-  filteredDistances.sort( (a, b) => a - b );
+  filteredDistances.sort( function(a, b) { return a - b } );
   
   return distances.indexOf( filteredDistances[0] );
 }
