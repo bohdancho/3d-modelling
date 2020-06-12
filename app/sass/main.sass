@@ -488,8 +488,10 @@ body
 .services
   background-color: #ffffff
   padding: 61px 0 72px
-  @media screen and (max-width: $lg)
-    padding: 40px 0 55px
+  @media screen and (max-width: $md)
+    padding: 35px 0
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &__title
     margin-bottom: 34px   
   &__item
@@ -582,6 +584,10 @@ body
   background-size: cover
   position: relative
   color: #ffffff
+  @media screen and (max-width: $md)
+    padding: 35px 0
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &:before
     content: ''
     display: block
@@ -908,9 +914,9 @@ body
   background-color: #ffffff
   padding: 61px 0 30px
   @media screen and (max-width: $lg)
-    padding: 40px 0 25px
+    padding: 35px 0 25px
   @media screen and (max-width: $sm)
-    padding: 35px 0 20px
+    padding: 25px 0 20px
   &__title
     margin-bottom: 32px
     @media screen and (max-width: $sm)
@@ -998,8 +1004,10 @@ body
 .why
   padding: 50px 0 65px
   background-color: $grey-bg
-  @media screen and (max-width: $sm)
+  @media screen and (max-width: $md)
     padding: 35px 0
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &__title
     margin-bottom: 35px
     @media screen and (max-width: $sm)
@@ -1061,9 +1069,9 @@ body
   padding: 65px 0
   background-color: #ffffff
   @media screen and (max-width: $md)
-    padding: 50px 0
-  @media screen and (max-width: $xs)
     padding: 35px 0
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &__title
     margin-bottom: 31px
     @media screen and (max-width: $xs)
@@ -1100,8 +1108,10 @@ body
 .trust
   padding: 50px 0
   background-color: $grey-bg
-  @media screen and (max-width: $xs)
-    padding: 35px 0
+  @media screen and (max-width: $md)
+    padding: 35px 0 20px
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &__title
     margin-bottom: 30px
     @media screen and (max-width: $xs)
@@ -1140,8 +1150,10 @@ body
 .team
   padding: 50px 0
   background-color: #ffffff
-  @media screen and (max-width: $xs)
+  @media screen and (max-width: $md)
     padding: 35px 0
+  @media screen and (max-width: $sm)
+    padding: 25px 0
   &__title
     margin-bottom: 15px
   &__list
@@ -1502,6 +1514,8 @@ body
   font-size: 14px
   @media screen and (max-width: $md)
     padding: 25px 0
+  @media screen and (max-width: $sm)
+    padding: 20px 0
   &-nav
     &__list
       max-height: 40px
