@@ -37,7 +37,9 @@ table {
 }
 
 input, button, textarea {
-  outline: none;
+  /* outline: none; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
