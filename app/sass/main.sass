@@ -1478,11 +1478,15 @@ body
   background-color: #24241f
   color: #ffffff
   font-size: 14px
+  @media screen and (max-width: $md)
+    padding: 25px 0
   &-nav
     &__list
       max-width: 500px
       display: flex
       flex-wrap: wrap
+      @media screen and (max-width: $md)
+        flex-direction: column
     &__item
       white-space: nowrap
       display: block
@@ -1490,11 +1494,17 @@ body
         margin-bottom: 6px
       &:not(:nth-child(3)):not(:last-child)
         margin-right: 80px
+      @media screen and (max-width: $md)
+        margin-bottom: 0
+        &:not(:last-child)
+          margin-bottom: 6px
   &__row
     padding-bottom: 45px
     display: flex
     justify-content: space-between
     position: relative
+    @media screen and (max-width: $md)
+      padding-bottom: 30px
     &:after
       content: ''
       display: block
@@ -1516,5 +1526,13 @@ body
       border-radius: 4px
       &:not(:last-child)
         margin-right: 8px
+        @media screen and (max-width: $md)
+          margin-right: 5px
+      @media screen and (max-width: $md)
+        width: 25px
+    &__icon
+      width: 100%
   &__text
     padding-top: 40px
+    @media screen and (max-width: $md)
+      padding-top: 30px
