@@ -131,23 +131,28 @@ imagesLoaded( portfolioImgs, function() {
   //   layoutMode: 'fitRows',
   //   filter: '.z-in' 
   // });  
-
-  if (window.matchMedia("(max-width: 575px)").matches) {
-    iso = new Isotope( portfolioImgs, {
-      itemSelector: '.portfolio__img',
-      layoutMode: 'vertical',
-      vertical: {
-        horizontalAlignment: 0.5,
-      },
-      filter: '.z-in' 
-    });  
-  } else {
-    iso = new Isotope( portfolioImgs, {
-      itemSelector: '.portfolio__img',
-      layoutMode: 'fitRows',
-      filter: '.z-in' 
-    });
+  function buildIsoGrid() {
+    if (window.matchMedia("(max-width: 575px)").matches) {
+      iso = new Isotope( portfolioImgs, {
+        itemSelector: '.portfolio__img',
+        layoutMode: 'vertical',
+        vertical: {
+          horizontalAlignment: 0.5,
+        },
+        filter: '.z-in' 
+      });  
+    } else {
+      iso = new Isotope( portfolioImgs, {
+        itemSelector: '.portfolio__img',
+        layoutMode: 'fitRows',
+        filter: '.z-in' 
+      });
+    }
   }
+
+  buildIsoGrid();
+
+  window.addEventListener("resize", buildIsoGrid);
   
   // bind filter button click
   let filtersElem = document.querySelector('.portfolio__btn-wrap');
