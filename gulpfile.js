@@ -10,6 +10,7 @@ var gulp         = require('gulp'),
 		rsync        = require('gulp-rsync'),
 		newer        = require('gulp-newer'),
 		responsive   = require('gulp-responsive'),
+		addsrc       = require('gulp-add-src'),
 		del          = require('del');
 
 // Local Server
@@ -80,6 +81,7 @@ gulp.task('img-responsive-2x', async function() {
 			'**/*': { width: '100%', quality: quality }
 		})).on('error', function (e) { console.log(e) })
 		.pipe(rename(function (path) {path.extname = path.extname.replace('jpeg', 'jpg')}))
+		.pipe(addsrc('app/img/_src/**/*.svg'))
 		.pipe(gulp.dest('app/img/@2x'))
 });
 gulp.task('img', gulp.series('img-responsive-1x', 'img-responsive-2x', bsReload));

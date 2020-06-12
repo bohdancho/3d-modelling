@@ -1461,3 +1461,60 @@ body
       font-size: 16px
       @media screen and (max-width: $lg)
         font-size: 15px
+
+
+
+
+
+
+//======================================================================================================================================================================
+
+
+
+
+
+.footer
+  padding: 40px 0
+  background-color: #24241f
+  color: #ffffff
+  font-size: 14px
+  &-nav
+    &__list
+      max-width: 500px
+      display: flex
+      flex-wrap: wrap
+    &__item
+      white-space: nowrap
+      display: block
+      &:nth-child(-n+3)
+        margin-bottom: 6px
+      &:not(:nth-child(3)):not(:last-child)
+        margin-right: 80px
+  &__row
+    padding-bottom: 45px
+    display: flex
+    justify-content: space-between
+    position: relative
+    &:after
+      content: ''
+      display: block
+      width: calc(100% + 30px)
+      height: 1px
+      background-color: #ffffff
+      opacity: 0.2
+      position: absolute
+      bottom: 0
+      left: -15px
+  &-info
+    &__text
+      margin-bottom: 8px
+    &__row
+      display: flex
+    &__icon-wrap
+      padding: 4px 4px 2px
+      border: 1px solid #ffffff
+      border-radius: 4px
+      &:not(:last-child)
+        margin-right: 8px
+  &__text
+    padding-top: 40px
