@@ -169,113 +169,115 @@
 
         <section class="calculate" id="calculate">
           <div class="container">
-            <h2 class="calculate__title title title_white">
-              Рассчитать стоимость
-            </h2>
-            <p class="calculate__text">
-              Расчитайте предварительную стоимость разработки интерьера
-            </p>
             <div class="calculate__inner">
-              <div class="calculate__calculator calculator">
-                <div class="calculator__block calculator-block">
-                  <div class="calculator-block__title calculator-block__title_top">
-                    Площадь помещения:
-                  </div>
-                  <div class="calculator-range">
-                    <div class="calculator__range-descr calculator__range-descr1">
-                      100 м<span class="sup">2</span>
-                    </div>
-                    <label class="calculator__range-label calculator__range-label1" for="calculator-range1"></label>
-
-                    <div class="calculator__range-descr calculator__range-descr2">
-                      10 000 м<span class="sup">2</span>
-                    </div>
-                    <label class="calculator__range-label calculator__range-label2" for="calculator-range2"></label>
-                    
-                    <div class="calculator__range-descr calculator__range-descr3">
-                      25 000 м<span class="sup">2</span>
-                    </div>
-                    <label class="calculator__range-label calculator__range-label3" for="calculator-range3"></label>
-                    
-                    <div class="calculator__range-descr calculator__range-descr4">
-                      50 000 м<span class="sup">2</span>
-                    </div>
-                    <label class="calculator__range-label calculator__range-label4" for="calculator-range4"></label>
-                    
-                    <input class="calculator__range" type="range" step="0.5" value="0">
-                  </div>
-                </div>
-                <div class="calculator__block calculator-block">
-                  <div class="calculator-block__title calculator-block__title_bot">
-                    Выберите пакет:
-                  </div>
-                  <div class="calculator__btns">
-                    <div class="calculator__btn">
-                      <input class="calculator__btn-input" id="calculator-btn1" name="btn" type="radio">
-                      <label class="calculator__btn-label" for="calculator-btn1">Light</label>
-                      <div class="calculator__btn-descr calculator__btn-descr1">
-                        В пакет включены только рабочие чертежи (план полов, план потолка, 
-                        развертки по стенам, план электросетей)
-                      </div>
-                    </div>
-                    
-                    <div class="calculator__btn">
-                      <input class="calculator__btn-input" id="calculator-btn2" checked name="btn" type="radio">
-                      <label class="calculator__btn-label" for="calculator-btn2">Medium</label>
-                      <div class="calculator__btn-descr calculator__btn-descr2">
-                        План расстановки мебели 3D визуализация. 
-                        Все рабочие чертежи (план полов, план потолка, 
-                        развертки по стенам, план электросетей)
-                      </div>
-                    </div>
-
-                    <div class="calculator__btn">
-                      <input class="calculator__btn-input" id="calculator-btn3" name="btn" type="radio">
-                      <label class="calculator__btn-label" for="calculator-btn3">Full</label>
-                      <div class="calculator__btn-descr calculator__btn-descr3">
-                        План расстановки мебели 3D визуализация. 
-                        Все рабочие чертежи (план полов, план потолка, 
-                        развертки по стенам, план электросетей).
-                        Консультирование по любому смежному вопросу.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calculate__info">
-                <div class="calculate__info-inner">
-                  <div class="calculate__info-item">
-                    <div class="calculate__info-title">
+              <h2 class="calculate__title title title_white">
+                Рассчитать стоимость
+              </h2>
+              <p class="calculate__text">
+                Расчитайте предварительную стоимость разработки интерьера
+              </p>
+              <div class="calculate__row">
+                <div class="calculate__calculator calculator">
+                  <div class="calculator__block calculator-block">
+                    <div class="calculator-block__title calculator-block__title_top">
                       Площадь помещения:
                     </div>
-                    <div class="calculate__info-num">
-                      <span class="calculate__info-area">100</span>&nbsp;м<span class="sup">2</span>
-                    </div>  
-                  </div>
-                  <div class="calculate__info-item">
-                    <div class="calculate__info-title">
-                      Средняя стоимость&nbsp;м<span class="sup">2</span>:
+                    <div class="calculator-range">
+                      <div class="calculator__range-descr calculator__range-descr1">
+                        100 м<span class="sup">2</span>
+                      </div>
+                      <label class="calculator__range-label calculator__range-label1" for="calculator-range1"></label>
+  
+                      <div class="calculator__range-descr calculator__range-descr2">
+                        10 000 м<span class="sup">2</span>
+                      </div>
+                      <label class="calculator__range-label calculator__range-label2" for="calculator-range2"></label>
+                      
+                      <div class="calculator__range-descr calculator__range-descr3">
+                        25 000 м<span class="sup">2</span>
+                      </div>
+                      <label class="calculator__range-label calculator__range-label3" for="calculator-range3"></label>
+                      
+                      <div class="calculator__range-descr calculator__range-descr4">
+                        50 000 м<span class="sup">2</span>
+                      </div>
+                      <label class="calculator__range-label calculator__range-label4" for="calculator-range4"></label>
+                      
+                      <input class="calculator__range" type="range" step="0.5" value="0">
                     </div>
-                    <div class="calculate__info-num">
-                      <span class="calculate__info-cost-avg">13.50</span>&nbsp;тг.
-                    </div>  
                   </div>
-                  <div class="calculate__info-item">
-                    <div class="calculate__info-title">
-                      Средняя стоимость объекта:
+                  <div class="calculator__block calculator-block">
+                    <div class="calculator-block__title calculator-block__title_bot">
+                      Выберите пакет:
                     </div>
-                    <div class="calculate__info-num">
-                      <span class="calculate__info-cost-sum">1350</span>&nbsp;тг.
-                    </div>  
+                    <div class="calculator__btns">
+                      <div class="calculator__btn">
+                        <input class="calculator__btn-input" id="calculator-btn1" name="btn" type="radio">
+                        <label class="calculator__btn-label" for="calculator-btn1">Light</label>
+                        <div class="calculator__btn-descr calculator__btn-descr1">
+                          В пакет включены только рабочие чертежи (план полов, план потолка, 
+                          развертки по стенам, план электросетей)
+                        </div>
+                      </div>
+                      
+                      <div class="calculator__btn">
+                        <input class="calculator__btn-input" id="calculator-btn2" checked name="btn" type="radio">
+                        <label class="calculator__btn-label" for="calculator-btn2">Medium</label>
+                        <div class="calculator__btn-descr calculator__btn-descr2">
+                          План расстановки мебели 3D визуализация. 
+                          Все рабочие чертежи (план полов, план потолка, 
+                          развертки по стенам, план электросетей)
+                        </div>
+                      </div>
+  
+                      <div class="calculator__btn">
+                        <input class="calculator__btn-input" id="calculator-btn3" name="btn" type="radio">
+                        <label class="calculator__btn-label" for="calculator-btn3">Full</label>
+                        <div class="calculator__btn-descr calculator__btn-descr3">
+                          План расстановки мебели 3D визуализация. 
+                          Все рабочие чертежи (план полов, план потолка, 
+                          развертки по стенам, план электросетей).
+                          Консультирование по любому смежному вопросу.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <button class="accent-btn calculate__info-btn">
-                  Получить консультацию специалиста
-                </button>
-                <div class="calculate__info-descr">
-                  или позвоните нам по телефону:
+                <div class="calculate__info">
+                  <div class="calculate__info-inner">
+                    <div class="calculate__info-item">
+                      <div class="calculate__info-title">
+                        Площадь помещения:
+                      </div>
+                      <div class="calculate__info-num">
+                        <span class="calculate__info-area">100</span>&nbsp;м<span class="sup">2</span>
+                      </div>  
+                    </div>
+                    <div class="calculate__info-item">
+                      <div class="calculate__info-title">
+                        Средняя стоимость&nbsp;м<span class="sup">2</span>:
+                      </div>
+                      <div class="calculate__info-num">
+                        <span class="calculate__info-cost-avg">13.50</span>&nbsp;тг.
+                      </div>  
+                    </div>
+                    <div class="calculate__info-item">
+                      <div class="calculate__info-title">
+                        Средняя стоимость объекта:
+                      </div>
+                      <div class="calculate__info-num">
+                        <span class="calculate__info-cost-sum">1350</span>&nbsp;тг.
+                      </div>  
+                    </div>
+                  </div>
+                  <button class="accent-btn calculate__info-btn">
+                    Получить консультацию специалиста
+                  </button>
+                  <div class="calculate__info-descr">
+                    или позвоните нам по телефону:
+                  </div>
+                  <a href="tel:77273887177" class="calculate__info-phone">+ 7 727 388 71 77</a>
                 </div>
-                <a href="tel:77273887177" class="calculate__info-phone">+ 7 727 388 71 77</a>
               </div>
             </div>
           </div>
