@@ -31,19 +31,24 @@ slideout
     this.panel.removeEventListener('click', slideClose);
   });
 
-function slideClose(eve) {
-  eve.preventDefault();
+function slideClose(event) {
+  event.preventDefault();
   slideout.close();
 }
 
 // /Slider
 
-// document.querySelectorAll('.smooth-scroll').forEach(elem, function() {
-// 	addEventListener('click', function(event) {
-// 		event.preventDefault();
-    
-// 	});
-// });
+const smoothScrollElems = document.querySelectorAll('.smooth-scroll');
+for (let i = 0; i < smoothScrollElems.length; i++) {
+	smoothScrollElems[i].addEventListener('click', function(event) {
+		event.preventDefault();
+    const elem = event.target;
+    const href = elem.getAttribute('href');
+    const anchorElem = document.querySelector(href);
+    const offsetTop = anchorElem.offsetTop; 
+    smoothScroll(anchorElem);
+	});
+};
 
 // Calculator
   function calculate() {
@@ -190,6 +195,29 @@ imagesLoaded( portfolioImgs, function() {
   }
 });
 
+
+
+
+
+
+
+// const heaa = new MaskInput(document.querySelector('.header__input_tel'), {
+//   mask: '0000-0000-0000-0000',
+//   alwaysShowMask: true,
+//   maskChar: '_',
+// }),
+//       maskInput = new MaskInput(document.querySelector('.contacts-form__input_tel'), {
+//   mask: '0000-0000-0000-0000',
+//   alwaysShowMask: true,
+//   maskChar: '_',
+// }),
+
+const inputmask = new Inputmask('(999) 999-9999');
+inputmask.mask(document.querySelector('.header__input_tel'));
+inputmask.mask(document.querySelector('.contacts-form__input_tel'));
+
+
+      
 
 
 

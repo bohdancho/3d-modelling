@@ -52,6 +52,8 @@ gulp.task('scripts', function() {
 		'node_modules/slideout/dist/slideout.js',
 		'node_modules/imagesloaded/imagesloaded.pkgd.js',
 		'node_modules/isotope-layout/dist/isotope.pkgd.js',
+		'node_modules/smoothscroll/smoothscroll.js',
+		'node_modules/inputmask/dist/inputmask.js',
 		'app/js/_custom.js' // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

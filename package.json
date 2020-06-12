@@ -26,7 +26,9 @@
 	},
 	"dependencies": {
 		"imagesloaded": "^4.1.4",
+		"inputmask": "^5.0.3",
 		"isotope-layout": "^3.0.6",
-		"slideout": "^1.0.1"
+		"slideout": "^1.0.1",
+		"smoothscroll": "^0.4.0"
 	}
 }
