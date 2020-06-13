@@ -52,9 +52,15 @@ body
   border: none
   border-radius: 30px
   cursor: pointer
+  transition: 0.4s ease
+  outline: none
+  &:focus
+    box-shadow: 0px 0px 0px 2px darken($accent, 15%);
   &_bolder
     font-weight: 500
     font-size: 16px
+  &:hover
+    background-color: darken($accent, 15%)
 
 .title
   padding-bottom: 24px
@@ -553,6 +559,7 @@ body
         text-align: center
     &__btn
       padding: 20px 36px
+      display: inline-block
       @media screen and (max-width: $lg)
         padding: 16px 28px
       @media screen and (max-width: $md)
@@ -974,6 +981,7 @@ body
       border-top: 1px solid $accent
       border-bottom: 1px solid $accent
       color: #ffffff
+      cursor: auto
       &:not(:last-child)
         &:after 
           display: none
