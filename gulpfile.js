@@ -8,7 +8,6 @@ var gulp         = require('gulp'),
 		gcmq         = require('gulp-group-css-media-queries'),
 		autoprefixer = require('gulp-autoprefixer'),
 		rsync        = require('gulp-rsync'),
-		addsrc       = require('gulp-add-src'),
 		imagemin     = require('gulp-imagemin'),
 		del          = require('del');
 
