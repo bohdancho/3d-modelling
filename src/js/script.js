@@ -207,7 +207,7 @@ function picturesAssignClass() {
     let img = imgs[i];
     let picture = img.parentNode;
     
-    picture.classList.add(img.getAttribute('data-picture-class'));
+    picture.classList.add(img.dataset.pictureClass);
   }
 }
 picturesAssignClass();
