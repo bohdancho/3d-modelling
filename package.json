@@ -24,11 +24,11 @@
     "gulp-webpcss": "^1.1.1"
   },
   "dependencies": {
-    "jquery": "^3.5.1",
     "imagesloaded": "^4.1.4",
     "inputmask": "^5.0.3",
     "isotope-layout": "^3.0.6",
     "slideout": "^1.0.1",
-    "smoothscroll": "^0.4.0"
+    "smoothscroll": "^0.4.0",
+    "vanilla-lazyload": "^17.1.0"
   }
 }

@@ -91,6 +91,7 @@ function css() {
 function js() {
   return src([
       path.src.js + 'polyfills.js',
+      vendor_folder + '/vanilla-lazyload/dist/lazyload.js',
       vendor_folder + '/slideout/dist/slideout.js',
       vendor_folder + '/imagesloaded/imagesloaded.pkgd.js',
       vendor_folder + '/isotope-layout/dist/isotope.pkgd.js',

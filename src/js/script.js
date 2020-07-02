@@ -200,6 +200,22 @@ for (let i = 0; i < smoothScrollElems.length; i++) {
 };
 // /smooth scroll
 
+function lazyWebpImgs() {
+  let lazyImgs = document.querySelectorAll('.lazy');
+  for (let i = 0; i < lazyImgs.length; i++) {
+    let img = lazyImgs[i];
+    let source = img.parentNode.querySelector('source');
+
+    let src = source.getAttribute('srcset');
+    source.removeAttribute('srcset');
+    source.setAttribute('data-srcset', src);
+  }
+}
+lazyWebpImgs();
+
+let lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy"
+});
 
 function picturesAssignClass() {
   let imgs = document.querySelectorAll('img[data-picture-class]');
