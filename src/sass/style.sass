@@ -1587,12 +1587,7 @@ body
         &:not(:last-child)
           margin-bottom: 6px
   &__row
-    padding-bottom: 45px
-    display: flex
-    justify-content: space-between
     position: relative
-    @media screen and (max-width: $md)
-      padding-bottom: 30px
     &:after
       content: ''
       display: block
@@ -1603,6 +1598,12 @@ body
       position: absolute
       bottom: 0
       left: -15px
+    &-inner
+      padding-bottom: 45px
+      display: flex
+      justify-content: space-between
+      @media screen and (max-width: $md)
+        padding-bottom: 30px
   &-info
     &__text
       margin-bottom: 8px
