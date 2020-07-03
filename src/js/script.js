@@ -11,6 +11,10 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
   slideout.toggle();
 });
 
+document.querySelector('.menu__close-btn').addEventListener('click', function() {
+  slideout.close();
+});
+
 let menuLinks = document.querySelectorAll('.menu__link')
 for (let i = 0; i < menuLinks.length; i++) {
 
