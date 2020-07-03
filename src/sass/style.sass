@@ -1569,6 +1569,7 @@ body
   @media screen and (max-width: $sm)
     padding: 20px 0
   &-nav
+    margin-right: 3px
     &__list
       max-height: 40px
       display: flex
@@ -1576,6 +1577,8 @@ body
       flex-direction: column
       @media screen and (max-width: $md)
         max-height: none
+      @media screen and (max-width: $sm)
+        min-width: 40%
     &__item
       white-space: nowrap
       display: block
@@ -1610,12 +1613,14 @@ body
       margin-bottom: 8px
     &__row
       display: flex
-    &__icon-item
-      &:not(:last-child)
-        margin-right: 8px
-        @media screen and (max-width: $md)
-          margin-right: 5px
+      flex-wrap: wrap
+      margin: -4px
       @media screen and (max-width: $md)
+        margin: -3px
+    &__icon-item
+      margin: 4px
+      @media screen and (max-width: $md)
+        margin: 3px
         width: 25px
     &__icon-wrap
       padding: 4px 4px 2px
